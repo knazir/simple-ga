@@ -45,4 +45,18 @@ public class Individual implements GAConstants {
 					this.fitness++;
 		return fitness;
 	}
+	
+	/** Sets a specific gene to a value and resets individual's fitness */
+	public void setGene(int index, int value) {
+		this.genes[index] = value;
+		this.fitness = 0;
+	}
+	
+	@Override
+	public String toString() {
+		String chromosome = "";
+		for (int i = 0; i < GENE_LENGTH; i++)
+			chromosome += genes[i];
+		return chromosome;
+	}
 }
