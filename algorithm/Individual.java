@@ -41,9 +41,14 @@ public class Individual implements GAConstants {
 	public int getFitness() {
 		if (this.fitness == 0)
 			for (int i = 0; i < GENE_LENGTH ; i++) 
-				if (genes[i] == SOLUTION_SEQUENCE[i]) 
+				if (getGene(i) == SOLUTION_SEQUENCE[i]) 
 					this.fitness++;
 		return fitness;
+	}
+	
+	/** Returns the gene at the specified chromosomal index */
+	public int getGene(int index) {
+		return genes[index];
 	}
 	
 	/** Sets a specific gene to a value and resets individual's fitness */
