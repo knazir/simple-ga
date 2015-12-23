@@ -5,8 +5,7 @@ package client;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.util.Random;
-
-import javax.swing.Timer;
+import java.util.Timer;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -27,10 +26,16 @@ import algorithm.Population;
 public class GraphApp extends ApplicationFrame implements GAConstants {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
+		
 		GraphApp chart = new GraphApp("Genetic Algorithm", "Fitness by Generation");
 		chart.pack( );
 		RefineryUtilities.centerFrameOnScreen(chart);
 		chart.setVisible(true);
+		
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime)/1000000;	// in milliseconds
+		System.out.println("Duration: " + duration + " milliseconds");
 	}
 
 	public GraphApp(String applicationTitle, String chartTitle) {
