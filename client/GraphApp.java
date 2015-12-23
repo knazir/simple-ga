@@ -78,5 +78,7 @@ public class GraphApp extends ApplicationFrame implements GAConstants {
 			populationData.add(generation, population.getFittest().getFitness());
 			population = algorithm.evolvePopulation(population);
 		}
+		
+		populationData.add(generation + 1, population.getFittest().getFitness());
 	}
 }

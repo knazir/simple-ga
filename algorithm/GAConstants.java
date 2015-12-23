@@ -10,6 +10,20 @@ public interface GAConstants {
 	public static final int POPULATION_SIZE = 100;
 	public static final int[] SOLUTION_SEQUENCE =
 		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	
+//	public static final int[] SOLUTION_SEQUENCE =
+//		{52, 14, 19, 79, 99, 87, 69, 99, 56, 61, 67, 71, 99, 94, 25, 77, 
+//		 69, 57, 65, 53, 42, 67, 38, 79, 62, 41, 81, 59, 20, 12, 68, 67, 
+//		 26, 49, 35, 87, 15, 70, 53, 15, 78, 10, 60, 29, 30, 78, 65, 16, 98, 39};
+	
+//	public static final int[] SOLUTION_SEQUENCE = 
+//		{71, 65, 45, 51, 64, 87, 63, 68, 54, 38, 44, 80, 22, 97, 30, 99, 40, 73, 44, 88, 
+//		 11, 35, 71, 52, 95, 85, 28, 46, 74, 12, 92, 79, 93, 89, 47, 95, 98, 12, 85, 78, 
+//		 59, 51, 47, 89, 45, 51, 29, 34, 75, 48, 54, 33, 46, 27, 55, 97, 12, 47, 30, 24, 
+//		 19, 24, 20, 22, 33, 51, 77, 26, 42, 88, 74, 80, 13, 65, 89, 19, 86, 91, 57, 75, 
+//		 19, 18, 30, 46, 31, 28, 68, 72, 45, 20, 98, 65, 42, 62, 13, 22, 21, 90, 21, 94};
+	
+	
 	public static final int MIN_VALUE = 0;
 	public static final int MAX_VALUE = 9;
 	public static final int GENE_LENGTH = SOLUTION_SEQUENCE.length;
