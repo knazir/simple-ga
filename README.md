@@ -9,7 +9,7 @@ After playing around with it, I have realized a few important things. To those w
 
 A high population also seems to decrease the average number of generations it takes to reach a solution. Given that the most expensive parts of the algorithm have a time complexity of O(n) where n is the number of elements in each chromosome, the runtime should increase linearly with an increase in population (iterates over population every generation).
 
-Increasing the range of possible values from (0, 9) to (0, 99) also substantially increased the average number of generations required to find a solution. This is obviously because of how many more options each gene has, so the original population should have a higher variation in fitness. However, I realized that this does not pose as much of a problem when the mutation rate isn't insanely high (0.15... what was I thinking?). 
+Increasing the range of possible values from (0, 9) to (0, 99) also substantially increased the average number of generations required to find a solution. This is obviously because of how many more options each gene has, so the original population should have a higher variation in fitness. However, I realized that this does not pose as much of a problem when the mutation rate isn't insanely high (0.15... what was I thinking?). Also, it is important to note that having a lower mutation rate will cause the algorithm to get "stuck" for many generations at a time. These can be observed by the segments of the graph with gradient 0.
 
 If you want to get a good feel for how this sort of thing works, I suggest also playing around with the various constants. I have added a couple of sample solution sequences of varying sizes and variance in values.
 ___
