@@ -4,6 +4,9 @@ package client;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.util.Random;
+
+import javax.swing.Timer;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
