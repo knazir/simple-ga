@@ -8,3 +8,7 @@ There is a client app included if you'd like to try for yourself. Playing around
 At first I thought it could be used as a password cracker... but then I remembered that I was being stupid. No sane login portal would give you an indication of "how close" you were to the solution.... I shall think of other things.
 
 This is my first try with this sort of thing. Credits to Holczer Balazs who discusses the various aspects of the genetic algorithm in his "Artificial Intelligence & Games in Java."
+
+Sample graph generated when searching to match a solution of 20 elements:
+
+![alt tag](http://i.imgur.com/io8GQYU.png)
