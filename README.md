@@ -18,3 +18,6 @@ ___
 Sample graph generated when searching to match a solution of 20 elements:
 
 ![alt tag](http://i.imgur.com/io8GQYU.png)
+___
+For more sample graphs, [CLICK HERE](http://imgur.com/a/Mvl6g)
+
