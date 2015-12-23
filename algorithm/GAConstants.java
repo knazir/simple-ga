@@ -1,8 +1,12 @@
+
 package algorithm;
 
 public interface GAConstants {
 
+	public static final int APPLICATION_WIDTH = 1024;
+	public static final int APPLICATION_HEIGHT = 768;
 	
+	public static final int POPULATION_SIZE = 100;
 	public static final int MIN_VALUE = 0;
 	public static final int MAX_VALUE = 9;
 	public static final int GENE_LENGTH = 20;
