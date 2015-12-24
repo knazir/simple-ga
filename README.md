@@ -17,9 +17,12 @@ If you want to get a good feel for how this sort of thing works, I suggest also 
 ___
 This is my first try with this sort of thing. Credits to Holczer Balazs who discusses the various aspects of the genetic algorithm in his "Artificial Intelligence & Games in Java."
 ___
-Sample graph generated when searching to match a solution of 20 elements with a population of size 100:
+Sample static graph searching to match a solution of 20 elements with a population of size 100:
 
 ![alt tag](http://i.imgur.com/io8GQYU.png)
+___
+Sample dynamic graph searching to match a solution of 100 elements with a population of size 100 (paused before completion):
+![alt tag](http://i.imgur.com/nG60CF8.png)
 ___
 For more sample graphs, [click here](http://imgur.com/a/Mvl6g)
 
