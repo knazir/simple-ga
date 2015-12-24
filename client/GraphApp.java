@@ -1,7 +1,6 @@
 package client;
 
 
-
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.util.Random;
@@ -62,12 +61,12 @@ public class GraphApp extends ApplicationFrame implements GAConstants {
 		XYSeriesCollection dataset = new XYSeriesCollection();
 		XYSeries populationData = new XYSeries("Population"); 
 		
-		runGeneticAlgorithm(dataset, populationData);
+		runGeneticAlgorithm(populationData);
 		dataset.addSeries(populationData);
 		return dataset;
 	}
 
-	private void runGeneticAlgorithm(XYDataset datase, XYSeries populationData) {
+	private void runGeneticAlgorithm(XYSeries populationData) {
 		GeneticAlgorithm algorithm = new GeneticAlgorithm();
 		Population population = new Population(POPULATION_SIZE);
 		population.initialize();
