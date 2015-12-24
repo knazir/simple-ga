@@ -63,12 +63,15 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 
 		final JComboBox combo = new JComboBox();
 		combo.addItem("Fast");
+		combo.addItem("Faster");
 		combo.addItem("Slow");
 		combo.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if ("Fast".equals(combo.getSelectedItem())) {
+				if ("Faster".equals(combo.getSelectedItem())) {
+					timer.setDelay(FASTER);
+				} else if ("Fast".equals(combo.getSelectedItem())) {
 					timer.setDelay(FAST);
 				} else {
 					timer.setDelay(SLOW);
@@ -95,7 +98,11 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 				
 				generationLabel.setText("Current Generation: " + generation);
 				
-				if (dataPoint == MAX_FITNESS) timer.stop();
+				if (dataPoint == MAX_FITNESS) {
+					population.initialize();
+					timer.stop();
+					run.setLabel(START);
+				}
 				
 				newData[0] = dataPoint;
 				dataset.advanceTime();

@@ -60,7 +60,8 @@ public interface GAConstants {
 	public static final String START = "Start";
 	public static final String STOP = "Stop";
 	public static final int COUNT = 2 * 60;
-	public static final int FAST = 50;
+	public static final int FASTER = 10;
+	public static final int FAST = FASTER * 5;
 	public static final int SLOW = FAST * 5;
 
 }
