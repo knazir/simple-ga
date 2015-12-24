@@ -43,6 +43,7 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 		dataset.setTimeBase(new Second(0, 0, 0, 1, 1, 2011));
 		dataset.addSeries(noData(), 0, "Population");
 		JFreeChart chart = createChart(dataset);
+		
 
 		final JLabel generationLabel = new JLabel("Current Generation: " + generation);
 		final JButton run = new JButton(STOP);
@@ -79,7 +80,9 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 			}
 		});
 
-		this.add(new ChartPanel(chart), BorderLayout.CENTER);
+		ChartPanel chartPanel = new ChartPanel(chart);
+		chartPanel.setPreferredSize( new java.awt.Dimension(APPLICATION_WIDTH , APPLICATION_HEIGHT));
+		this.add(chartPanel, BorderLayout.CENTER);
 		JPanel btnPanel = new JPanel(new FlowLayout());
 		btnPanel.add(generationLabel);
 		btnPanel.add(run);
