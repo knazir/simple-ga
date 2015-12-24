@@ -143,7 +143,7 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 
 			@Override
 			public void run() {
-				DynamicGraphApp demo = new DynamicGraphApp(GRAPH_TITLE);
+				DynamicGraphApp demo = new DynamicGraphApp("Genetic Algorithm Real-Time Evolution");
 				demo.pack();
 				RefineryUtilities.centerFrameOnScreen(demo);
 				demo.setVisible(true);

@@ -27,7 +27,7 @@ public class GraphApp extends ApplicationFrame implements GAConstants {
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
 		
-		GraphApp chart = new GraphApp("Genetic Algorithm", "Fitness by Generation");
+		GraphApp chart = new GraphApp("Genetic Algorithm Evolution Progress", GRAPH_TITLE);
 		chart.pack( );
 		RefineryUtilities.centerFrameOnScreen(chart);
 		chart.setVisible(true);
