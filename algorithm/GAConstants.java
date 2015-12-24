@@ -59,6 +59,7 @@ public interface GAConstants {
 	public static final int GRAPH_Y_AXIS_BUFFER = 5;
 	public static final String START = "Start";
 	public static final String STOP = "Stop";
+	public static final String RESTART = "Restart";
 	public static final int COUNT = 2 * 60;
 	public static final int FASTER = 10;
 	public static final int FAST = FASTER * 5;

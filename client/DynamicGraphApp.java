@@ -99,9 +99,10 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 				generationLabel.setText("Current Generation: " + generation);
 				
 				if (dataPoint == MAX_FITNESS) {
+					generation = 0;
 					population.initialize();
 					timer.stop();
-					run.setLabel(START);
+					run.setText(RESTART);
 				}
 				
 				newData[0] = dataPoint;
