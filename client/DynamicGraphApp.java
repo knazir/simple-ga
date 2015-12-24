@@ -4,10 +4,10 @@ import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -44,6 +44,7 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 		dataset.addSeries(noData(), 0, "Population");
 		JFreeChart chart = createChart(dataset);
 
+		final JLabel generationLabel = new JLabel("Current Generation: " + generation);
 		final JButton run = new JButton(STOP);
 		run.addActionListener(new ActionListener() {
 
@@ -77,6 +78,7 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 
 		this.add(new ChartPanel(chart), BorderLayout.CENTER);
 		JPanel btnPanel = new JPanel(new FlowLayout());
+		btnPanel.add(generationLabel);
 		btnPanel.add(run);
 		btnPanel.add(combo);
 		this.add(btnPanel, BorderLayout.SOUTH);
@@ -90,6 +92,9 @@ public class DynamicGraphApp extends ApplicationFrame implements GAConstants {
 				generation++;
 				float dataPoint = population.getFittest().getFitness();
 				population = algorithm.evolvePopulation(population);
+				
+				generationLabel.setText("Current Generation: " + generation);
+				
 				if (dataPoint == MAX_FITNESS) timer.stop();
 				
 				newData[0] = dataPoint;
